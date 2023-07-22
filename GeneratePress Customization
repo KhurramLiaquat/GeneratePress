@@ -132,3 +132,65 @@ margin: 0 0 1.5em;
 	border-radius: 10px;
   box-shadow: rgba(23,43,99,.2) 0 5px 25px!important;
 }
+/* Customize Web-Scrollbar */
+*::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;margin-left:-10px!important;
+}
+*::-webkit-scrollbar
+{
+	width: 10px;
+	margin-left:-10px;
+	background-color: #F5F5F5!important;
+}
+*::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD 51%, #4CB8C4 100%);
+}
+/* Reading Progress Bar */
+/* Create a Hook Element and paste this code and for the beauty of the progress scroll-bar turn off the sticky menu*/
+<style>
+#site-navigation{
+  margin-top:10px!important;
+}
+
+.web-insights-reading-meter {
+  position: fixed;
+  top: 0!important;
+  z-index: 1111;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.web-insights-progress {
+  width: 100%;
+  height: 10px;  z-index: 1111;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color:tomato;
+  width: 0%;
+}
+</style>
+
+<div class="web-insights-reading-meter">
+  <div class="web-insights-progress">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<script> 
+window.onscroll = function() {myFunction()};
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
