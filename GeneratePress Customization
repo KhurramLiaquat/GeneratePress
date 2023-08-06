@@ -62,7 +62,6 @@ background: #333;
 color: #fff;
 }
 /*End of sidebar code*/
-/*End of sidebar code*/
 @media (min-width: 769px) {
 .post-image-aligned-left .post-image img {
 margin-top: -20px;
@@ -92,6 +91,7 @@ position: sticky;
 top: 10px;
 }
 }
+/* End of Widget Sticky */
 /* Read More button Style */
 a.read-more.button {background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%)}
 a.read-more.button {
